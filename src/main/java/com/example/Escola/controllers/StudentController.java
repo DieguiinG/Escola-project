@@ -56,7 +56,7 @@ public class StudentController {
 		
 		Optional<StudentModel> student0 = studentRepository.findById(id);
 		if(student0.isEmpty()){
-			return ResponseEntity.status(HttpStatus.OK).body("Product Not found");
+			return ResponseEntity.status(HttpStatus.OK).body("Student Not found");
 		}
 		var studentModel = student0.get();
 		BeanUtils.copyProperties(studentRecordDTO, studentModel);
