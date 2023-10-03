@@ -28,7 +28,7 @@ public class StudentController {
 	@Autowired
 	StudentRepository studentRepository;
 	
-	@PostMapping("/student")
+	@PostMapping("/students")
 	public ResponseEntity<StudentModel> saveStudent(@RequestBody @Valid StudentRecordDTO studentRecordDTO){
 		var studentModel = new StudentModel();
 		BeanUtils.copyProperties(studentRecordDTO, studentModel);
